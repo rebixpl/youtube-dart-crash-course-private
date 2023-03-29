@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Guessing Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-16">
+        <h1 class="text-4xl font-bold mb-8 text-center">Word Guessing Game</h1>
+        <div id="game" class="text-center">
+            <div id="word" class="text-2xl font-bold mb-4"></div>
+            <div id="message" class="text-xl font-bold text-red-500 mb-4 hidden"></div>
+            <input id="input" type="text" maxlength="1" class="border border-gray-300 p-2 mb-4">
+            <button id="submit"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Guess</button>
+            <div id="attempts" class="text-xl font-bold mt-4"></div>
+        </div>
+    </div>
+    <script>
+        const wordElement = document.getElementById("word");
+        const messageElement = document.getElementById("message");
+        const inputElement = document.getElementById("input");
+        const submitButton = document.getElementById("submit");
+        const attemptsElement = document.getElementById("attempts");
+
+        const words = ["apple", "orange", "banana", "kiwi"];
+        const maxAttempts = 10;
+
+        let currentWord = "";
+        let hiddenWord = "";
+        let attempts = 0;
+
+        function startGame() {
+            currentWord = words[Math.floor(Math.random() * words.length)];
+            hiddenWord = currentWord.replace(/./g, "*");
+            attempts = maxAttempts;
+
+            updateUI();
+        }
+
+        function updateUI() {
+            wordElement.textContent = hiddenWord;
+            attemptsElement.textContent = `Attempts: ${attempts}`;
+            messageElement.classList.add("hidden");
+        }
+
+        submitButton.addEventListener("click", () => {
+            const guessedLetter = inputElement.value.toLowerCase();
+            if (guessedLetter.length === 1 && guessedLetter.match(/[a-z]/)) {
+                let updated = false;
+                for (let i = 0; i < currentWord.length; i++) {
+                    if (currentWord[i] === guessedLetter) {
+                        hiddenWord = hiddenWord.slice(0, i) + guessedLetter + hiddenWord.slice(i + 1);
+                        updated = true;
+                    }
+                }
+
+                if (!updated) {
+                    attempts--;
+                }
+
+                if (hiddenWord === currentWord) {
+                    messageElement.textContent = "Congratulations! You guessed the word!";
+                    messageElement.classList.remove("hidden");
+                } else if (attempts === 0) {
+                    messageElement.textContent = `Sorry, you are out of attempts. The word was: ${currentWord}`;
+                    messageElement.classList.remove("hidden");
+                } else {
+                    updateUI();
+                }
+            } else {
+                messageElement.textContent = "Please enter a valid letter.";
+                messageElement.classList.remove("hidden");
+            }
+
+            inputElement.value = "";
+        });
+
+        startGame();
+    </script>
+</body>
+
+</html>

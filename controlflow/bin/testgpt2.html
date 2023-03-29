@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Add any custom CSS styles here */
+    </style>
+</head>
+
+<body>
+    <div class="container mx-auto px-4 py-10">
+        <h1 class="text-4xl font-bold mb-5">Number Guessing Game</h1>
+        <p class="mb-3">Guess a number between 1 and 100:</p>
+        <input id="guess" class="border border-gray-300 p-2 rounded" type="number" min="1" max="100">
+        <button id="check" class="bg-blue-500 text-white px-4 py-2 rounded ml-2">Check</button>
+        <p id="message" class="mt-5"></p>
+    </div>
+    <script>
+        const randomNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+
+        const guessInput = document.getElementById('guess');
+        const checkButton = document.getElementById('check');
+        const message = document.getElementById('message');
+
+        checkButton.addEventListener('click', () => {
+            const guess = parseInt(guessInput.value);
+            attempts++;
+
+            if (guess === randomNumber) {
+                message.textContent = `Congratulations! You guessed the number in ${attempts} attempts!`;
+                message.classList.add('text-green-500');
+            } else if (guess < randomNumber) {
+                message.textContent = 'Too low! Try again.';
+                message.classList.remove('text-green-500');
+                message.classList.add('text-red-500');
+            } else {
+                message.textContent = 'Too high! Try again.';
+                message.classList.remove('text-green-500');
+                message.classList.add('text-red-500');
+            }
+        });
+    </script>
+</body>
+
+</html>
