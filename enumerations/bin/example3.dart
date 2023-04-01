@@ -17,3 +17,6 @@ enum AnimalType {
   dog,
   cat,
 }
+
+// Create an enum with 10 values of types of cars
+
