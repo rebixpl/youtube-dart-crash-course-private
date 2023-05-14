@@ -2,11 +2,11 @@
 
 void main(List<String> args) {
   final person = Person();
-  print(person.fullName);
-  print(person.fullName);
-  print(person.fullName);
-  print(person.firstName);
-  print(person.lastName);
+  print(person.fullName); // OUTPUT: _getFullName() is called\nFoo Bar
+  print(person.fullName); // OUTPUT: Foo Bar
+  print(person.fullName); // OUTPUT: Foo Bar
+  print(person.firstName); // OUTPUT: Foo
+  print(person.lastName); // OUTPUT: Bar
 }
 
 class Person {

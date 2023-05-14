@@ -3,6 +3,10 @@ void main(List<String> args) {
   late final fullName = getFullName();
   final resolvedFullName = fullName;
   print('resolvedFullName = $resolvedFullName');
+  // OUTPUT:
+  // late fullName is being initialized
+  // getFullName() is called
+  // resolvedFullName = John Doe
 }
 
 String getFullName() {
