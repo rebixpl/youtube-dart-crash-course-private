@@ -1,5 +1,19 @@
 // Abstract Classes
 
+/* Here is the explanation for the code above:
+1. The Vehicle class is an abstract class. It can’t be instantiated. It has two
+methods: accelerate() and decelerate(). Both methods have a default
+implementation.
+2. The Car class extends the Vehicle class. It overrides the accelerate()
+and decelerate() methods.
+3. The Motorcycle class implements the Vehicle interface. It only
+overrides the accelerate() and decelerate() methods.
+4. The VehicleKind is an enum that represents the different kinds of
+vehicles.
+5. The main() function creates an instance of the Car and Motorcycle
+classes. It calls the accelerate() and decelerate() methods on these
+instances. */
+
 void main(List<String> args) {
   const car = Car();
   print(car); // Instance of 'Car'
