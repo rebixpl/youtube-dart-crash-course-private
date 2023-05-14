@@ -1,5 +1,17 @@
 // Default Values For Optionals
 
+/* This code is defining a function called fullName that takes two optional 
+string parameters, firstName and lastName. It concatenates the two parameters
+ with a space character and returns the result as a string.
+
+The interesting part is the extension Defaultvalues defined on a generic 
+type T? that provides a method called orDefault. This method checks if the 
+value is null, and if it is, returns a default value for that type 
+(0 for int, 0.0 for double, an empty string for String, and false for bool).
+
+The fullName function uses this extension method to provide default 
+values for the parameters if they are null. */
+
 void main(List<String> args) {
   print(fullName(null, null)); // OUTPUT:
   print(fullName("Joe", null)); // OUTPUT: Joe
