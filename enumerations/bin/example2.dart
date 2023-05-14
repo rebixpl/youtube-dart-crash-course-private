@@ -1,5 +1,16 @@
 // Enchanced Enumerations
 
+/* This Dart code shows an example of enhanced enumerations. It defines a Car 
+enumeration with two values: teslaModelX and teslaModelY. Each value of the 
+enumeration has three fields: manufacturer, model, and year.
+
+It also defines a Person class that has a name and a car field, with the latter 
+being of type Car. An instance of Person is created with a name and a Car value.
+
+A switch statement is used to check the value of person.car and print a message 
+depending on the value. In this example, the value of person.car is Car.teslaModelX,
+ so the output is "Person has a Tesla Model X Car: Tesla Model X 2023 */
+
 void main(List<String> args) {
   final person = Person(
     name: 'Bob',

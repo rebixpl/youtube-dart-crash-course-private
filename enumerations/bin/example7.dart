@@ -1,5 +1,11 @@
 // Extending Enumerations
 
+/* Here is the explanation for the code above:
+1. The AnimalType enum has three values: cat, dog, and rabbit. 
+2. The AnimalType enum has a run() method that prints a string to the console. 
+3. The AnimalType enum is extended by the Jump extension. 
+4. The Jump extension adds a jump() method to the AnimalType enum. */
+
 void main(List<String> args) {
   AnimalType.dog
     ..jump()

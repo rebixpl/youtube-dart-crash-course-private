@@ -1,4 +1,12 @@
 // Hash Code and Equality
+
+/* Here is the explanation for the code above:
+1. The hashCode getter returns a hash code representing the object. The hash code 
+is based on the content of the object. Two objects that are equal, according to 
+the == operator, must return the same hash code.
+2. The == operator compares the content of the objects to determine equality. The 
+operator can be overridden to change the equality semantics of a class. */
+
 void main(List<String> args) {
   final person1 = Person(
     age: 10,

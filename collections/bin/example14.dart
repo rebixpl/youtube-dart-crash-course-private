@@ -111,7 +111,8 @@ void testCanonicalizedMap() {
 }
 
 void testBoolList() {
-  /// BoolList is helpful when you are using thousands of boolean values, it takes only one byte to store boolean value
+  /// BoolList is helpful when you are using thousands of boolean values, it takes
+  /// only one byte to store boolean value
   final boolList = BoolList(10, growable: true);
   print(
     boolList,
