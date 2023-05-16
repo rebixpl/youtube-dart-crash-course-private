@@ -1,4 +1,13 @@
 /// UNARY PREFIX OPERATORS
+///
+/// This Dart code demonstrates the use of unary prefix operators,
+/// which are operators that are applied to a single operand before the expression
+/// is evaluated. It includes examples of the decrement operator (--), the
+/// logical not operator (!), and the unary minus operator (-). It also demonstrates
+/// the unary bitwise complement operator (~), which flips the bits of a binary number.
+/// Finally, it shows that applying the unary minus operator twice to a value cancels
+/// out the effect of the operator.
+///
 
 void main(List<String> args) {
   /// 4 types of operators

@@ -1,5 +1,13 @@
 // Converting Strings to Enums
 
+/* /* Here is the explanation for the code above:
+1. The first print statement prints all the possible values of the enum.
+2. The second print statement prints the name of the enum.
+3. The animalType() function converts the string to the enum value. It returns 
+null if the string is not a valid enum value.
+4. The describe() function takes an enum value as an argument and prints the 
+description of the animal type. It prints Unknown animal if the argument is null. */*/
+
 void main(List<String> args) {
   print(
     AnimalType.values,

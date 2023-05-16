@@ -15,4 +15,6 @@ void main(List<String> args) {
   if (lastName?.contains('Bar') == true) {
     print('Last name contains Bar');
   }
+
+  // OUTPUT: Last name contains Bar
 }

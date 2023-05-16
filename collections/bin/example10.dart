@@ -1,5 +1,11 @@
 // Extending ListBase to create a Safer List
 
+/* This Dart code creates a custom SafeList class by extending ListBase.
+ It overrides the [], []= and length methods to make it safer to use. The SafeList 
+ has two optional parameters, defaultValue and absentValue, to specify the default 
+ and absent values. When the list is accessed at an index that doesn't exist, the 
+ absentValue is returned. When the list is extended, it's filled with the defaultValue. */
+
 import 'dart:collection';
 
 void main(List<String> args) {

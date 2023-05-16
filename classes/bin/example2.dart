@@ -1,5 +1,18 @@
 // Constructors
 
+/* Here is the explanation for the code above:
+1. The class Person has a default constructor, a named constructor with an initializer list, 
+and a named constructor with an initializer list and optional parameters.
+2. The default constructor takes two required parameters, name and age.
+3. The named constructor with an initializer list, named foo, sets the name property to “Foo” 
+and the age property to 20.
+4. The named constructor with an initializer list, named bar, sets the name property to “Bar” 
+and the age property to the value passed in as an argument.
+5. The named constructor with an initializer list and optional parameters, named other, 
+sets the name property to the value passed in as an argument or “Baz” if no argument is 
+passed. It also sets the age property to the value passed in as an argument or 30 if no 
+argument is passed. */
+
 void main(List<String> args) {
   // Named Constructor with an initializer list
   const person2 = Person.foo();

@@ -1,7 +1,7 @@
 void main(List<String> args) {
-  describe();
-  describe(something: null);
-  describe(something: 'Hello, Dart!');
+  describe(); // OUTPUT: Hello, world!
+  describe(something: null); // OUTPUT: null
+  describe(something: 'Hello, Dart!'); // OUTPUT: Hello, Dart!
 }
 
 void describe({

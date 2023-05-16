@@ -1,5 +1,13 @@
 // Avoiding Constructor Initialization of Late Variables
 
+/* This Dart code demonstrates two ways of initializing the membersCount property 
+of a Family class based on a list of Person objects. The first implementation 
+(WrongImplementationOfFamily) uses a late modifier and initializes membersCount 
+in the constructor, which can lead to unexpected results. The second implementation 
+(RightImplementationOfFamily) initializes membersCount immediately and avoids the 
+use of late.
+*/
+
 void main(List<String> args) {
   final johnDoe = Person(name: 'John Doe');
   final janeDoe = Person(name: 'Jane Doe');

@@ -1,5 +1,18 @@
 // SPread Operator with Collections
 
+/* This Dart code shows how to use the spread operator with collections. The spread 
+operator can be used to combine two arrays or dictionaries without modifying their 
+original contents.
+
+The addToArrayWrong() function shows an incorrect way to combine two arrays by 
+copying the memory address instead of the content of an array. The addToArrayRight() 
+function shows the correct way to combine two arrays using the spread operator.
+
+The addToDictionaryWrong() function shows an error that occurs when trying to 
+modify a constant dictionary. The addToDictionaryRight() function shows the correct
+ way to create a new dictionary with the same values as the constant dictionary and 
+ add a new key-value pair using the spread operator. */
+
 void main(List<String> args) {
   addToArrayWrong();
   print('--------------------');

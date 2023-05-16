@@ -1,5 +1,12 @@
 // Collection Comprehensions
 
+/* This Dart code demonstrates Collection Comprehensions, which are a concise 
+way of creating collections in Dart. The code shows examples of using collection 
+comprehensions to filter elements from a list, generate even numbers, and create 
+a dictionary mapping the length of a name to the name itself. The code also shows 
+how to use set comprehensions to remove elements containing 'a', 'b', or 'c' from 
+a string. */
+
 void main(List<String> args) {
   // final String string = 'abracadabra';
   // var result = '';
